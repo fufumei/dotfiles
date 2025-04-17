@@ -1,6 +1,5 @@
 # Prompt
 oh-my-posh init pwsh --config '~\.config\powershell\fumei.omp.json' | Invoke-Expression
-oh-my-posh init pwsh --config '~\.config\powershell\fumei.omp.json' | Invoke-Expression
 
 # Alias
 Set-Alias vsc code
