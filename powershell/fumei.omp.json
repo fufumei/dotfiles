@@ -1,13 +1,20 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-  "console_title_template": "{{ .Folder }}{{if .Root}} :: admin{{end}}",
+  "palette": {
+    "os": "#ACB0BE",
+    "closer": "p:os",
+    "pink": "#F4B8E4",
+    "lavender": "#BABBF1",
+    "blue": "#8CAAEE"
+  },
   "blocks": [
     {
       "alignment": "left",
       "segments": [
         {
-          "foreground": "#15C2CB",
-          "properties": {
+          "foreground": "p:blue",
+          "options": {
+            "home_icon": "~",
             "style": "folder"
           },
           "style": "plain",
@@ -15,44 +22,25 @@
           "type": "path"
         },
         {
-          "foreground": "#F141A8",
-          "properties": {
-            "branch_icon": "\ue0a0 "
+          "foreground": "p:lavender",
+          "options": {
+            "branch_icon": "\ue725 ",
+            "cherry_pick_icon": "\ue29b ",
+            "commit_icon": "\uf417 ",
+            "fetch_status": false,
+            "fetch_upstream_icon": false,
+            "merge_icon": "\ue727 ",
+            "no_commits_icon": "\uf0c3 ",
+            "rebase_icon": "\ue728 ",
+            "revert_icon": "\uf0e2 ",
+            "tag_icon": "\uf412 "
           },
+          "template": "on {{ .HEAD }} ",
           "style": "plain",
-          "template": "<#F3EFF5>on</> {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }} ",
           "type": "git"
         },
         {
-          "foreground": "#5EADF2",
-          "style": "plain",
-          "template": "{{if .Version}}<#F3EFF5>is</> \uf487 {{.Version}} {{end}}",
-          "type": "project"
-        },
-        {
-          "foreground": "#44FFD2",
-          "properties": {
-            "fetch_version": true
-          },
-          "style": "plain",
-          "template": "<#F3EFF5>via</> \ue718 {{ .Full }} ",
-          "type": "node"
-        },
-        {
-          "foreground": "#FE4A49",
-          "style": "plain",
-          "template": "<#F3EFF5>and</> \ue71e {{.Full}} ",
-          "type": "npm"
-        }
-      ],
-      "type": "prompt"
-    },
-    {
-      "alignment": "left",
-      "newline": false,
-      "segments": [
-        {
-          "foreground": "#815eff",
+          "foreground": "p:pink",
           "style": "plain",
           "template": "\u276f ",
           "type": "text"
@@ -62,8 +50,9 @@
     }
   ],
   "transient_prompt": {
-    "foreground": "#815eff",
+    "foreground": "p:lavender",
     "template": "\u276f "
   },
-  "version": 2
+  "final_space": true,
+  "version": 1
 }
