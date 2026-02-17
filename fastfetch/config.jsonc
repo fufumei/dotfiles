@@ -1,0 +1,64 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "file",
+    "source": "~/.config/fastfetch/ascii.txt",
+    "color": {
+      "1": "#7cdbbd",
+      "2": "#7cdbbd",
+      "3": "#7cdbbd",
+      "4": "#7cdbbd",
+      "5": "#7cdbbd",
+      "6": "#7cdbbd",
+      "7": "#7cdbbd",
+      "8": "#7cdbbd",
+      "9": "#7cdbbd",
+    },
+    "padding": {
+      "top": 1,
+      "right": 3,
+      "bottom": 3,
+    },
+  },
+  "display": {
+    "separator": " ",
+  },
+  "modules": [
+    "break",
+    {
+      "type": "os",
+      "format": "{pretty-name}",
+      "key": "\ue602 OS   ",
+      "keyColor": "#89DCEB",
+    },
+    {
+      "type": "cpu",
+      "key": "\ue602 CPU  ",
+      "keyColor": "#F5C2E7",
+    },
+    {
+      "type": "gpu",
+      "key": "\ue602 GPU  󰚗",
+      "keyColor": "#FAB387",
+    },
+    {
+      "type": "memory",
+      "key": "\ue602 RAM  ",
+      "keyColor": "#A6E3A1",
+      "format": "{used} / {total} ({percentage})",
+    },
+    {
+      "type": "disk",
+      "key": "\ue602 DISK ",
+      "keyColor": "#94E2D5",
+    },
+    "break",
+    {
+      "type": "display",
+      "outputColor": "white",
+      "format": "{name} {inch}\" {refresh-rate}Hz {width}x{height}",
+      "key": "\ue602 DSPL \udb80\udf79",
+      "keyColor": "38;2;183;175;224",
+    },
+  ],
+}
