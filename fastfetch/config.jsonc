@@ -27,7 +27,7 @@
     "break",
     {
       "type": "os",
-      "format": "{pretty-name}",
+      "format": "{pretty-name} {arch}",
       "key": "\ue602 OS   ",
       "keyColor": "#89DCEB",
     },
@@ -47,10 +47,12 @@
       "keyColor": "#A6E3A1",
       "format": "{used} / {total} ({percentage})",
     },
+    "break",
     {
       "type": "disk",
-      "key": "\ue602 DISK ",
+      "key": "\ue602 {name} ",
       "keyColor": "#94E2D5",
+      "format": "{size-used} / {size-total} ({size-percentage}) - {filesystem}",
     },
     "break",
     {
